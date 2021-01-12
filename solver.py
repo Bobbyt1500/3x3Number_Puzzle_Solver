@@ -1,5 +1,5 @@
 """
-Solver.py solves the AI using A* Search
+Solver.py solves the puzzle using A* Search
 """
 import copy
 import time
