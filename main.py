@@ -28,10 +28,10 @@ def create_solution_box(solution):
     box.title("Solution")
     box.geometry("300x300")
 
-    solution_label = tk.Label(box,text=solution,fg="white",font="Fixedsys 15 bold",bg="#4ca1c3",pady=10,wraplength=250)
+    solution_label = tk.Label(box,text=solution,fg="white",font="Helvetica 15 bold",bg="#4ca1c3",pady=10,wraplength=250)
     solution_label.pack()
 
-    dismiss_button = tk.Button(box,text="Dismiss",relief="flat",bg="#5a4c67",activebackground="#540101",fg="white",activeforeground="white",cursor="hand1",bd=0,highlightthickness=0,width=12,height=2,font="Fixedsys 10 bold",command=box.destroy)
+    dismiss_button = tk.Button(box,text="Dismiss",relief="flat",bg="#5a4c67",activebackground="#540101",fg="white",activeforeground="white",cursor="hand1",bd=0,highlightthickness=0,width=12,height=2,font="Helvetica 10 bold",command=box.destroy)
     dismiss_button.pack()
 
 def get_inputs():
@@ -80,9 +80,9 @@ def setup_gui():
     input_area = tk.Frame(root, height = 200, width = 500, bg="#4ca1c3")
 
 
-    reset_button = tk.Button(input_area,text="Clear Spaces",relief="flat",bg="#b72b3d",activebackground="#540101",fg="white",activeforeground="white",cursor="hand1",bd=0,highlightthickness=0,width=12,height=2,font="Fixedsys 10 bold",command=clear_grid)
+    reset_button = tk.Button(input_area,text="Clear Spaces",relief="flat",bg="#b72b3d",activebackground="#540101",fg="white",activeforeground="white",cursor="hand1",bd=0,highlightthickness=0,width=12,height=2,font="Helvetica 10 bold",command=clear_grid)
 
-    find_button = tk.Button(input_area,text="Find Solution",relief="flat",bg="#5a4c67",activebackground="#540101",fg="white",activeforeground="white",cursor="hand1",bd=0,highlightthickness=0,width=12,height=2,font="Fixedsys 10 bold",command=main)
+    find_button = tk.Button(input_area,text="Find Solution",relief="flat",bg="#5a4c67",activebackground="#540101",fg="white",activeforeground="white",cursor="hand1",bd=0,highlightthickness=0,width=12,height=2,font="Helvetica 10 bold",command=main)
 
     #Add each widget to its layout position
     board_area.grid(column=0,row=0)
@@ -107,7 +107,7 @@ def setup_grid(board_area):
             frame = tk.Frame(board_area,height=500/3,width=500/3,bg="#517796",highlightbackground="white",highlightthickness=2,highlightcolor="white")
             frame.grid(column=i,row=j)
             grid_frames.append(frame)
-            entry = tk.Entry(frame,bg="#517796",font="Fixedsys 50 bold",fg="white",width=2,highlightcolor="white",insertbackground="white",justify="center",validate="key",vcmd=(validation, '%P'))
+            entry = tk.Entry(frame,bg="#517796",font="Helvetica 50 bold",fg="white",width=2,highlightcolor="white",insertbackground="white",justify="center",validate="key",vcmd=(validation, '%P'))
             entry.place(relx=.5,rely=.5,anchor="center")
             grid_entries.append(entry)
 
